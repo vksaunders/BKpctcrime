@@ -6,6 +6,31 @@ If we want to understand which parks in New York City have the fewest crime comp
 
 Using NYC Open Data for Police Complaints we may analyze crime trends for Prospect Park and Fort Greene Park in Brooklyn alongside crime trends for the precincts directly surrounding these two neighborhood parks. Police Complaint Data is open to the public for all reported incidents from 2006 to the present. Beginning in 2014, the NYPD began recording parks complaints as a separate variable in their complaint data. This parks column includes large parks, playgrounds, and all green spaces in the city. The parks are still recorded as part of their dedicated precincts but can be separated for analysis by park name. 
 
-Studying park crime alongside precinct crime is not a perfect match-up. Residential neighborhoods encounter crimes that won’t be committed in a park (ie breaking-and-entering) and parks do not have a residential population to calculate population density in the metrics. In order to address population, albeit imperfectly, I will use the estimated annual visitor population for each park, divided by 365 days, as an average daily “population” count for each park. Crime trends relative to population may then be compared between the precincts and parks. An additional metric I will include is the square acreage area for the precincts and parks to calculate crimes by geographic footprint. Looking at these trends compared to each other, and over time, may reveal indications of whether the parks are safer than the surrounding neighborhoods and whether reported crimes appear to be trending up or down over time.
-After running comparisons between each park and the selected precincts, based on data described above, I will examine date-time intervals for Prospect Park and Fort Greene Park to determine which months of the year and times of the day have historically (over the past five years) recorded the most and least crime incidents in these two parks. This analysis will help us to develop a risk profile for enjoying the park throughout the year and during the day or night.
-All data for this project is free, open, and available.
+The Project
+
+Time Frame: 2014-2018
+Location: Brooklyn, NY
+Goal: Calculate crime complaint rates in Prospect Park and Fort Greene Park, as well as their adjacent Brooklyn precincts:
+70, 71, 72, 77, 78, 88
+
+Using square area and 2010 census block data, create population density measures for each precinct. The parks have estimated visitor populations of 10,000,000 (Prospect Park) and 1,000,000 (Fort Greene Park). Dividing these totals by 365, we will have an estimate of daily population to use in calculations.
+
+Using R:
+
+Filter crime data (NYPD Complaint Data (Historic)merged with NYPD Complaint Data (Current)) for years 2014-2018, filter by the precincts in question, and select only the relevant variables for this research question: Date, Time, Precinct Number, Crime Level, Description, and Park Name.
+
+Gather block data from 2010 Census (American FactFinder). Using CSV key of block:precinct key-values, sum the total population per precinct.
+
+QGIS may be used with precinct shapefiles to calculate square area for the precincts. Acres are the measurement used in this study.
+
+Create scatterplots for each precinct and park showing all crimes reported from 2014-2018, separated by crime level (Felony, Misdemeanor, Violation)
+
+Create sums of each crime level for each year: this potentially shows a trend of more crimes over time or fewer crimes over time for each area
+
+Create crime rate for each precinct, based on population. Number of crime complaints per 1000 people, over time.
+
+Using month and time variables, we may also create risk profiles for each park: which months have historically had the fewest/most complaints, and which hours of the day have historically had the fewest/most complaints.
+
+Show the top 5 crime complaints by description for each precinct and park. What crimes are actually being reported?
+
+
