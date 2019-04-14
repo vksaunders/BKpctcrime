@@ -14,7 +14,7 @@ Location: Brooklyn, NY
 Goal: Calculate crime complaint rates in Prospect Park and Fort Greene Park, as well as their adjacent Brooklyn precincts:
 70, 71, 72, 77, 78, 88
 
-Using square area and 2010 census block data, create population density measures for each precinct. The parks have estimated visitor populations of 10,000,000 (Prospect Park) and 1,000,000 (Fort Greene Park). Dividing these totals by 365, we will have an estimate of daily population to use in calculations.
+Using square area and 2010 census block data, create population density measures for each precinct. The parks have estimated annual visitor populations of 10,000,000 (Prospect Park) and 1,000,000 (Fort Greene Park). Dividing these totals by 365, we will have an estimate of daily population to use in calculations.
 
 Using R:
 ---------
