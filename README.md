@@ -16,6 +16,8 @@ Goal: Calculate crime complaint rates in Prospect Park and Fort Greene Park, as 
 
 Using square area and 2010 census block data, create population density measures for each precinct. The parks have estimated annual visitor populations of 10,000,000 (Prospect Park) and 1,000,000 (Fort Greene Park). Dividing these totals by 365, we will have an estimate of daily population to use in calculations.
 
+Block-Precinct key table is from John Keefe blog: link on http://johnkeefe.net/nyc-police-precinct-and-census-data
+
 Using R:
 ---------
 Filter crime data (NYPD Complaint Data (Historic)merged with NYPD Complaint Data (Current)) for years 2014-2018, filter by the precincts in question, and select only the relevant variables for this research question: Date, Time, Precinct Number, Crime Level, Description, and Park Name.
